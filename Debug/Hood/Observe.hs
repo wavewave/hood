@@ -63,9 +63,18 @@ module Debug.Hood.Observe
   , debugO         -- IO a -> IO [CDS]
   , CDS(..)
   , CDSSet
+
+  -- * temporary
+  , Output
+  , rmEntrySet
+  , simplifyCDSSet
+  , cdssToOutput
+  , commonOutput
+  , nil
+  , renderTop
   ) where
 
-{-
+{-
 ************************************************************************
 *                                                                      *
                           Imports and infixing
@@ -107,7 +116,7 @@ import Prelude hiding (
 
 infixl 9 <<
 
-{-
+{-
 ************************************************************************
 *                                                                      *
                         External start functions
